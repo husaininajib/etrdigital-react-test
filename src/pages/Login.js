@@ -22,13 +22,13 @@ const Login = ({ setUsername }) => {
     onSubmit: (values) => {
       console.log(values);
       setUsername(values.username);
-      navigate('/user');
+      navigate('/dashboard');
     },
   });
 
   return (
-    <Container maxWidth="lg" sx={{ border: '1px solid red', mt: 4 }}>
-      <Paper sx={{ p: 4 }}>
+    <Container maxWidth="lg">
+      <Paper sx={{ p: 4, mt: 8 }}>
         <Typography variant="h4" color="text.primary" component={'h1'} align="center" mb={10}>
           Login
         </Typography>
