@@ -20,8 +20,8 @@ const Login = ({ setUsername }) => {
     validateOnChange: false,
     validateOnBlur: false,
     onSubmit: (values) => {
-      console.log(values);
       setUsername(values.username);
+      localStorage.setItem('username', JSON.stringify(values.username));
       navigate('/dashboard');
     },
   });
@@ -68,4 +68,4 @@ const Login = ({ setUsername }) => {
   );
 };
 
-export default Login;
+export default Login

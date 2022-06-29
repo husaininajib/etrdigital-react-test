@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import './App.css';
 import Login from './pages/Login';
 import DashBoard from './pages/Dashboard';
 import { useState } from 'react';
 
 function App() {
-  const [username, setUsername] = useState('Nejuko')
+  const [username, setUsername] = useState(JSON.parse(localStorage.getItem('username')) || '');
+
   return (
     <>
       <BrowserRouter>
